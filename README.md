@@ -5,7 +5,7 @@
 - webpack comes with Jest library
 - Created Routes
 - Created Header
-- Login Form
+- Login Form // Convert to signup form on click upon Signuop Now
 
 
 ## Features
@@ -33,3 +33,27 @@
 - Absolute: type of positioning that allows you to literally place any page element exactly where you want it. You use the positioning attributes top, left, bottom, and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the <html> element itself meaning it will be placed relative to the page itself.absolute positioning is that these elements are removed from the flow of elements on the page. An element with this type of positioning is not affected by other elements and it doesn’t affect other elements. 
 
 - Fixed: A fixed position element is positioned relative to the viewport, or the browser window itself. The viewport doesn’t change when the window is scrolled, so a fixed positioned element will stay right where it is when the page is scrolled.
+
+## Logical Operator ( && )
+
+- Logical AND (&&) evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are truthy, the value of the last operand is returned.
+-  && operator can be used with non Boolean operands i.e; expressions and Functions.
+- Consider the pseudocode below.
+ (some falsy expression) && expr   -----> on occurenc of false value it immediately returns false
+
+ function A() {
+  console.log("called A");
+  return false;
+}
+function B() {
+  console.log("called B");
+  return true;
+}
+
+console.log(A() && B());
+// Logs "called A" to the console due to the call for function A,
+// && evaluates to false (function A returns false), then false is logged to the console;
+// the AND operator short-circuits here and ignores function B
+
+## Formik Forms for react form libraries
+- If we have big forms validation of each field is crucial so formik library makes it easier
