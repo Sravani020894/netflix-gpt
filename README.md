@@ -6,7 +6,7 @@
 - Created Routes
 - Created Header
 - Login Form // Convert to signup form on click upon Signuop Now
-
+- Form validation
 
 ## Features
 - Login/Signup Page
