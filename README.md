@@ -6,7 +6,8 @@
 - Created Routes
 - Created Header
 - Login Form // Convert to signup form on click upon Signuop Now
-- Form validation
+- Form validation using Regex
+- Authentication with Firebase
 
 ## Features
 - Login/Signup Page
@@ -57,3 +58,17 @@ console.log(A() && B());
 
 ## Formik Forms for react form libraries
 - If we have big forms validation of each field is crucial so formik library makes it easier
+
+## useRef() hook
+- useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+- const ref = useRef(initialValue)
+Parameters :
+
+initialValue: The value you want the ref object’s current property to be initially. It can be a value of any type. This argument is ignored after the initial render.
+
+Returns :useRef returns an object with a single property
+
+current: Initially, it’s set to the initialValue you have passed. You can later set it to something else. If you pass the ref object to React as a ref attribute to a JSX node, React will set its current property.
+On the next renders, useRef will return the same object.
+
+## Firebase
