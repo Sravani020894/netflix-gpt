@@ -7,6 +7,8 @@
 - Created Header
 - Login Form // Convert to signup form on click upon Signuop Now
 - Form validation using Regex
+- Firebase configuration/setup
+- Deploying app with firebase hosting
 - Authentication with Firebase
 
 ## Features
@@ -72,3 +74,16 @@ current: Initially, it’s set to the initialValue you have passed. You can late
 On the next renders, useRef will return the same object.
 
 ## Firebase
+- create a app name and enable the app to deploy in firebase
+- Add firebase SDK by installing npm install firebase and adding firebase configuration for the project.
+- Install FIREBASE CLI . To host site with firebase hosting firbase cli is needed (npm install -g firebase-tools) 
+- To deploy site with firebase hosting
+    $ firebase login
+        //Got an error File C:\Users\sravani.rebba\AppData\Roaming\npm\firebase.ps1 cannot be loaded because running scripts is disabled on this system.
+        //[RESOLVED] : by deleting firebase.ps1 file from C:\Users\sravani.rebba\AppData\Roaming\npm
+    $ firebase init
+        // build will be given as public directory,like in parcel whenever project is deployed a build will be seen in dist folder.
+        //to create a build for the project given 
+                npm run build
+    $ firebase deploy
+
