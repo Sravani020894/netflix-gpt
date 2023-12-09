@@ -90,3 +90,5 @@ On the next renders, useRef will return the same object.
     $ firebase deploy
         // will get url for the project
 
+- Enable type of authentication like EMAIL/PASSWORD or Google account or linkedin account etc under Authentication GetStarted/Setting sign-in method
+- Now in  Firebase documentation check for Email/password authentication under web,where code for user is signup & signin will be used in our peoject.

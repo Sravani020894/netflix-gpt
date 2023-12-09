@@ -13,7 +13,7 @@ const Login = () => {
   const password = useRef(null);
   const validateCredentials = () => {
         console.log(fullname,email,password);
-        const errmessage = validateCheck(fullname.current.value,email.current.value,password.current.value);
+        const errmessage = validateCheck(email.current.value,password.current.value);
         setmessage(errmessage);
         if(message) return;
         if(!isSignInForm){
