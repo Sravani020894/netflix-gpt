@@ -9,7 +9,9 @@
 - Form validation using Regex
 - Firebase configuration/setup
 - Deploying app with firebase hosting
-- Authentication with Firebase
+- create a signup user
+- signin user
+
 
 ## Features
 - Login/Signup Page
@@ -86,4 +88,5 @@ On the next renders, useRef will return the same object.
         //to create a build for the project given 
                 npm run build
     $ firebase deploy
+        // will get url for the project
 

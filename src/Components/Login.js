@@ -1,7 +1,7 @@
 import React, { useState,useRef } from 'react'
 import Header from './Header'
 import validateCheck  from '../utils/validateCheck';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword ,signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from '../utils/firebase'
 
 const Login = () => {
@@ -12,12 +12,12 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const validateCredentials = () => {
-        console.log(fullname);
+        console.log(fullname,email,password);
         const errmessage = validateCheck(fullname.current.value,email.current.value,password.current.value);
         setmessage(errmessage);
         if(message) return;
         if(!isSignInForm){
-          createUserWithEmailAndPassword(auth, email, password)
+          createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
           .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
@@ -31,7 +31,21 @@ const Login = () => {
           setmessage(errorCode+ "-" + errorMessage);
         });
         }
-  }
+        else{
+          signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+          .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          // ...
+          console.log(user);
+          })
+          .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setmessage(errorCode+" "+errorMessage)
+          });
+        }
+   }
   return (
     <div>
       <div className='absolute'>
