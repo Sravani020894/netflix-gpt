@@ -91,4 +91,10 @@ On the next renders, useRef will return the same object.
         // will get url for the project
 
 - Enable type of authentication like EMAIL/PASSWORD or Google account or linkedin account etc under Authentication GetStarted/Setting sign-in method
-- Now in  Firebase documentation check for Email/password authentication under web,where code for user is signup & signin will be used in our peoject.
+- Now in Firebase documentation check for Email/password authentication under web,where code for user signup & signin will be used in our project.
+
+## Redux store
+- users that are signup in account will be stored in Redux store,so that these users can be used any where in Application.
+- 2 libraries are installed for redux
+    npm i -D @reduxjs/toolkit
+    npm i react-redux
